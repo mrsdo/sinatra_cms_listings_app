@@ -1,9 +1,17 @@
 development:
-  adapter: sqlite3
-  database: database.db
+  adapter: mysql2
+  encoding: utf8
+  database: dev_listingsmgr_app
+  username: root
+  password: Palo5non!
 test:
-  adapter: sqlite3
-  database: database.db
+  adapter: mysql2
+  database: test_listingsmgr_app
+  username: root
+  password: Palo5non!
 production:
-  adapter: postgresql
-  database: sch_database mydb
+  adapter: mysql2
+  encoding: utf8
+  database: sch_listingsmgr mydb
+  username: root
+  password: Palo5non!
