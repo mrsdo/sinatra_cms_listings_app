@@ -1,17 +1,17 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: dev_listingsmgr_app
+  database: dev_sinatralistings_app
   username: root
   password: Palo5non!
 test:
   adapter: mysql2
-  database: test_listingsmgr_app
+  database: test_sinatralistings_app
   username: root
   password: Palo5non!
 production:
   adapter: mysql2
   encoding: utf8
-  database: sch_listingsmgr mydb
+  database: sch_sinatralistings_app mydb
   username: root
   password: Palo5non!

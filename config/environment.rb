@@ -10,7 +10,7 @@ configure :development do
   ActiveRecord::Base.establish_connection(
     :adapter => "mysql2",
     :encoding => "utf8",
-    :database => "dev_todo_app",
+    :database => "dev_sinatralistings_app",
     :username => "root",
     :password => "Palo5non!"
   )
