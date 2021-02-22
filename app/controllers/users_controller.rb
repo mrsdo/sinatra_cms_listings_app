@@ -4,10 +4,10 @@ class UsersController < ApplicationController
     if signed_in?
       # then find the user who's session params = to user_id
       @user = User.find(session[:user_id])
-      # finally disply the todo list where user_id = to current user
+      # Display the listings where user_id = to current user
 
-        # @user = User.where(user_id: current_user)
-        # binding.pry
+
+
         erb :"users/show.html"
     else
       redirect "/signin"
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 
   # POST: /send the sign-in info to the server and let the user to login
   post "/signin" do
-    @user = User.find_by(:username => params[:username])
+    @user = User.find_by(:email => params[:email])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect '/listings'
