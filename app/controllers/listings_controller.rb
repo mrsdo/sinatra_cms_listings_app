@@ -1,17 +1,17 @@
 class ListingsController < ApplicationController
-  # # GET: /listings If logged in, then listings
-  # get "/listings" do
-  #   # if the user is signed in?
-  #   if signed_in?
-  #     # then find the user who's session params = to user_id
-  #     @user = User.find(session[:user_id])
-  #     # Display the listings where user_id = to current user
-  #     @listings = Listing.where(user_id: current_user)
-  #       erb :"/listings/index.html"
-  #   else
-  #     redirect "listings/view-listings"
-  #   end
-  # end
+  # GET: /listings If logged in, then listings
+  get "/listings" do
+    # if the user is signed in?
+    if signed_in?
+      # then find the user who's session params = to user_id
+      @user = User.find(session[:user_id])
+      # Display the listings where user_id = to current user
+      @listings = Listing.where(user_id: current_user)
+        erb :"/listings/index.html"
+    else
+      redirect "/listings/view-listings"
+    end
+  end
 
   # GET: /listings/view-listings If not logged in, then view-listings
   get "/listings/view-listings" do

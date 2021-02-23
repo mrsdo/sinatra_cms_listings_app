@@ -1,0 +1,17 @@
+
+*.ru
+*.log
+*.lock
+/.idea/
+config.ru
+/config
+Gemfile
+Gemfile.lock
+passenger.3000.pid.lock
+passenger.3000.log
+CODE_OF_CONDUCT.md
+LICENSE.txt
+Rakefile
+README.md
+spec
+spec.md

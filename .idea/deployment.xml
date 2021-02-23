@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" serverName="shegottablog.com" createEmptyFolders="true" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="shegottablog.com">
+      <paths name="fis.shegottablog.com">
         <serverdata>
           <mappings>
             <mapping deploy="/fis.shegottablog.com/public" local="$PROJECT_DIR$" web="/" />
