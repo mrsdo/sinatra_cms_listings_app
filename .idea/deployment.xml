@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="shegottablog.com" createEmptyFolders="true" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="shegottablog.com" createEmptyFolders="true" uploadOnCheckin="46486e26-82fc-4d31-a21f-f8f9be38cfd3" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="shegottablog.com">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="shegottablog.com" />
   </component>
 </project>

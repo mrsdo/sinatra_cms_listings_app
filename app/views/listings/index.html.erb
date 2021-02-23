@@ -1,25 +1,23 @@
-<section>
-  <h3>My Listings</h3>
-  <table class="table-striped">
-    <thead>
+<h2>My Listings</h2>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Image</th>
+    <th>Summary</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% Array(@listings).each do |listing|%>
     <tr>
-      <th>ID. </th>
-      <th>Name</th>
-      <th>Summary</th>
-      <th>Updated</th>
+      <td><%= listing.id %></td>
+      <td><img src="<%= listing.photo_1 %>" alt="" width="200" height="100"/></td>
+      <td>
+        <strong><%= listing.name %></strong>
+        <br/><br/>
+        <%= truncate(listing.summary, length: 250) %><a href='/listings/<%= listing.id %>\edit'>edit</a>
+      </td>
     </tr>
-    </thead>
-
-    <tbody>
-    <% Array(@listings).each do |listing|%>
-      <tr>
-        <td><a href='/listings/<%= listing.id%>/edit'><%= listing.id%></a></td>
-        <td><%= listing.name %></td>
-        <td><%= listing.summary %></td>
-        <td>data</td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-
-</section>
+  <% end %>
+  </tbody>
+</table>
