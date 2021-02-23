@@ -47,7 +47,9 @@ class ListingsController < ApplicationController
       else
         @user = User.find_by(:id => session[:user_id])
         # create new instance of listing
-        @listing = Listing.new
+        # @listing = Listing.new
+        @listing = Listing.create(params[:Listing])
+
         # set the name of name
         @listing.name = params[:name]
         # finally save it

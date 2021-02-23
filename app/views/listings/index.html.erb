@@ -15,7 +15,7 @@
       <td>
         <strong><%= listing.name %></strong>
         <br/><br/>
-        <%= truncate(listing.summary, length: 250) %><a href='/listings/<%= listing.id %>\edit'>edit</a>
+        <%= listing.summary.truncate(255) %><a href='/listings/<%= listing.id %>\edit'>edit</a>
       </td>
     </tr>
   <% end %>

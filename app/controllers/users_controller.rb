@@ -50,7 +50,7 @@ class UsersController < ApplicationController
       redirect "/signup"
     end
   end
-  #POST:/send the signup infor to the serverand let the user to create account
+  #POST:/send the signup info to the server and let the user to create account
   post "/signup" do
     # if one of the entry field is empty direct to the signup page
     if params[:fname].empty? || params[:lname].empty? || params[:username].empty? || params[:email].empty? || params[:password].empty?
