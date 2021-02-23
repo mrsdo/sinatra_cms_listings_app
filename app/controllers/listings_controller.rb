@@ -1,8 +1,15 @@
 class ListingsController < ApplicationController
+
+  # GET: NOT LOGGED IN
+  get "/listings/view-listings" do
+    @listing = Listing.all
+    erb :"/listings/view-listings"
+  end
+
   # GET: /listings asking the server for the data in listing -- done
   get "/listings" do
     # if the user is signed in?
-    if signed_in?
+    if signed_in? == true
       # then find the user who's session params = to user_id
       @user = User.find(session[:user_id])
       # finally disply the listing list where user_id = to current user
@@ -10,9 +17,11 @@ class ListingsController < ApplicationController
         @listings = Listing.where(user_id: current_user)
         # binding.pry
         erb :"listings/index.html"
-    else
+
+      else
+
       redirect "/signin"
-    end
+      end
   end
 
   # GET: /listings/new -- done

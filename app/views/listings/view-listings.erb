@@ -1,0 +1,24 @@
+
+<h2>View Current Listings</h2>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Image</th>
+    <th>Summary</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @listing.each do |listing| %>
+    <tr>
+      <td><%= listing.id %></td>
+      <td><img src="<%= listing.photo_1 %>" alt="" width="200" height="100"/></td>
+      <td>
+        <strong><%= listing.name %></strong>
+        <br/><br/>
+        <%= listing.summary.truncate(255) %><a href='/listings/<%= listing.id %>'>Read More</a>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
