@@ -1,17 +1,29 @@
 class ListingsController < ApplicationController
-  # GET: /listings asking the server for the data in listing -- done
-  get "/listings" do
-    # if the user is signed in?
-    if signed_in?
-      # then find the user who's session params = to user_id
-      @user = User.find(session[:user_id])
-      # finally disply the listing list where user_id = to current user
+  # # GET: /listings If logged in, then listings
+  # get "/listings" do
+  #   # if the user is signed in?
+  #   if signed_in?
+  #     # then find the user who's session params = to user_id
+  #     @user = User.find(session[:user_id])
+  #     # Display the listings where user_id = to current user
+  #     @listings = Listing.where(user_id: current_user)
+  #       erb :"/listings/index.html"
+  #   else
+  #     redirect "listings/view-listings"
+  #   end
+  # end
 
-        @listings = Listing.where(user_id: current_user)
-        # binding.pry
-        erb :"listings/index.html"
-    else
-      redirect "/signin"
+  # GET: /listings/view-listings If not logged in, then view-listings
+  get "/listings/view-listings" do
+    # if the user is signed in?
+    if signed_in? == false
+
+      erb :"/listings/view-listings"
+    else      # then find the user who's session params = to user_id
+    @user = User.find(session[:user_id])
+              # Display the listings where user_id = to current user
+    @listings = Listing.where(user_id: current_user)
+      redirect "/listings"
     end
   end
 
@@ -57,10 +69,9 @@ class ListingsController < ApplicationController
   end
   get '/listings/:id' do
     if signed_in?
-      # @user = User.find_by(id: session[:user_id])
+      @user = User.find_by(id: session[:user_id])
       @listing = Listing.find(params[:id])
       if @listing && @listing.user == current_user
-      # binding.pry
       erb :'/listings/show.html'
     else
       redirect "/signin"
@@ -74,9 +85,6 @@ class ListingsController < ApplicationController
     @user = User.find_by(id: session[:user_id])
     @listing = Listing.find(params[:id])
     if @listing && @listing.user == current_user
-
-    # there is no relation between this line and line 37 it just bcz of redirecting due to design
-    # those two values are the end up equals
     erb :"/listings/edit.html"
     else
       redirect "/listings"
