@@ -75,7 +75,7 @@ class UsersController < ApplicationController
       session.destroy
       redirect "/signin"
     else
-      redirect "/index"
+      redirect "/welcome"
     end
   end
 
