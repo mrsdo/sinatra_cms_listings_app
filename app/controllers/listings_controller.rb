@@ -48,7 +48,7 @@ class ListingsController < ApplicationController
         @user = User.find_by(:id => session[:user_id])
         # create new instance of listing
         # @listing = Listing.new
-        @listing = Listing.create(params[:Listing])
+        @listing = Listing.new(params[:listings])
 
         # set the name of name
         @listing.name = params[:name]
@@ -126,5 +126,7 @@ class ListingsController < ApplicationController
    else
      redirect to '/signin'
    end
- end
+  end
+
+
 end

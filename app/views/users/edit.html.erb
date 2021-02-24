@@ -6,10 +6,12 @@
   <form class="form" action="/users/<%= @user.id %>" method="post">
 
   <input id="hidden" type="hidden" name="_method" value="patch">
-  <input type="text" name="fname" placeholder="First Name:">
-  <input type="text" name="lname" placeholder="Last Name:">
-  <input type="text" name="email" placeholder="Email:">
-  <input type="text" name="password" placeholder="Password:">
+  <input type="text" name="fname" value="<%= @user.fname %>">
+  <input type="text" name="lname" value="<%= @user.lname %>">
+    <input type="text" name="username" value="<%= @user.username %>">
+  <input type="text" name="email" value="<%= @user.email %>">
+  <input id="myInput" type="hidden" name="password" value="<%= @user.password_digest %>">
+
 
   <input type="submit" value="update" class="button">
 </form>
