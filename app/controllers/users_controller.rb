@@ -7,7 +7,6 @@ class UsersController < ApplicationController
       # Display the listings where user_id = to current user
 
 
-
         erb :"users/show.html"
     else
       redirect "/signin"
@@ -65,7 +64,7 @@ class UsersController < ApplicationController
 
       @user.save
       session[:user_id] = @user.id
-      redirect "/listings"
+      redirect "/users/show"
     end
   end
   get "/signout" do

@@ -16,7 +16,7 @@ class ListingsController < ApplicationController
 
         @listings = Listing.where(user_id: current_user)
         # binding.pry
-        erb :"listings/index.html"
+        erb :"listings/show.html"
 
       else
 
@@ -43,23 +43,15 @@ class ListingsController < ApplicationController
       # binding.pry
 
       if params[:name].empty?
-        redirect "/listings/new"
+        puts 'Please complete all fields'
+        redirect "/signup"
       else
         @user = User.find_by(:id => session[:user_id])
         # create new instance of listing
         # @listing = Listing.new
-        @listing = Listing.new(params[:listings])
-
-        # set the name of name
-        @listing.name = params[:name]
-        # finally save it
-        @listing.user_id = @user.id
+        @listing = Listing.create(:name => params[:name], :tag_name => params[:tag_name], :asking_price => params[:asking_price], :bedrooms => params[:bedrooms], :status => params[:status], :bathrooms => params[:bathrooms], :first_listed => params[:first_listed], :sqft => params[:sqft], :summary.to_s => params[:summary.to_s])
+        # @listing.user_id = @user.id
         @listing.save
-
-        # listing = Listing.create(name: params[:name], user_id: @user.id)
-        # redirect to the show page, HTTP is stateless means instance variable in one action
-        # will ever never relates to instance variable in another action
-        # ser the listing id to the propeer one
         redirect "/listings"
       end
     else
@@ -90,7 +82,7 @@ class ListingsController < ApplicationController
     # those two values are the end up equals
     erb :"/listings/edit.html"
     else
-      redirect "/listings"
+      redirect "/listings/show"
     end
   end
   patch '/listings/:id' do
@@ -100,7 +92,8 @@ class ListingsController < ApplicationController
       else
         @listing = Listing.find_by_id(params[:id])
         if @listing && @listing.user == current_user
-          if @listing.update(:name => params[:name])
+          # if @listing.update(:name => params[:name])
+          if @listing.update(:name => params[:name], :tag_name => params[:tag_name], :asking_price => params[:asking_price], :bedrooms => params[:bedrooms], :status => params[:status], :bathrooms => params[:bathrooms], :first_listed => params[:first_listed], :sqft => params[:sqft], :summary.to_s => params[:summary.to_s])
             redirect to "/listings/#{@listing.id}"
           else
           redirect to "/listings/#{@listing.id}/edit"
