@@ -7,7 +7,6 @@ class UsersController < ApplicationController
       # Display the listings where user_id = to current user
 
 
-
         erb :"users/show.html"
     else
       redirect "/signin"
@@ -50,7 +49,7 @@ class UsersController < ApplicationController
       redirect "/signup"
     end
   end
-  #POST:/send the signup infor to the serverand let the user to create account
+  #POST:/send the signup info to the server and let the user to create account
   post "/signup" do
     # if one of the entry field is empty direct to the signup page
     if params[:fname].empty? || params[:lname].empty? || params[:username].empty? || params[:email].empty? || params[:password].empty?
@@ -65,7 +64,7 @@ class UsersController < ApplicationController
 
       @user.save
       session[:user_id] = @user.id
-      redirect "/listings"
+      redirect "/users/show"
     end
   end
   get "/signout" do
@@ -112,13 +111,4 @@ class UsersController < ApplicationController
       redirect '/signin'
     end
   end
-  # patch "/users/:id" do
-  #   # raise params.inspect
-  #   # fins the todo with the specific id
-  #   @user = User.find(params[:id])
-  #   # binding.pry
-  #   @user.update(name: params[:name], email: params[:email])
-  #   # binding.pry
-  #     redirect "/users/#{@user.id}"
-  # end
 end

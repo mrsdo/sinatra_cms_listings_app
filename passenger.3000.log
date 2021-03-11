@@ -1,0 +1,102 @@
+[ N 2021-03-11 07:06:07.1881 16648/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2021-03-11 07:06:07.2432 16650/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2021-03-11 07:06:07.2451 16650/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2021-03-11 07:06:07.2831 16650/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 16650
+[ N 2021-03-11 07:06:10.2227 16650/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 16668 output: D, [2021-03-11T07:06:16.748577 #16668] DEBUG -- :   [1m[35m (4.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+App 16668 output: Error: The application encountered the following error: Migrations are pending. Run `rake db:migrate` to resolve the issue. (RuntimeError)
+App 16668 output:     config.ru:4:in `block in <main>'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/rack-2.2.3/lib/rack/builder.rb:125:in `instance_eval'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/rack-2.2.3/lib/rack/builder.rb:125:in `initialize'
+App 16668 output:     config.ru:1:in `new'
+App 16668 output:     config.ru:1:in `<main>'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/passenger-6.0.7/src/helper-scripts/rack-preloader.rb:101:in `eval'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/passenger-6.0.7/src/helper-scripts/rack-preloader.rb:101:in `preload_app'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/passenger-6.0.7/src/helper-scripts/rack-preloader.rb:189:in `block in <module:App>'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/passenger-6.0.7/src/ruby_supportlib/phusion_passenger/loader_shared_helpers.rb:382:in `run_block_and_record_step_progress'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/passenger-6.0.7/src/helper-scripts/rack-preloader.rb:188:in `<module:App>'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/passenger-6.0.7/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+App 16668 output:     /Users/mrsdo/.rvm/gems/ruby-2.7.2/gems/passenger-6.0.7/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+[ E 2021-03-11 07:06:16.9755 16650/Tj age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /Users/mrsdo/Development/inmotion/sinatra_cms_listings_app: The application encountered the following error: Migrations are pending. Run `rake db:migrate` to resolve the issue. (RuntimeError)
+  Error ID: 6135cde2
+  Error details saved to: /var/folders/62/cv_zt3mx1v3bgtcgrdbxw3wh0000gn/T//passenger-error-IWk6R1.html
+
+[ E 2021-03-11 07:06:16.9927 16650/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 6135cde2. Please see earlier logs for details about the error.
+[ E 2021-03-11 07:06:16.9927 16650/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 6135cde2. Please see earlier logs for details about the error.
+
+[ N 2021-03-11 07:07:09.5231 16650/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2021-03-11 07:07:09.5232 16650/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2021-03-11 07:07:09.5240 16650/Te Ser/Server.h:901 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2021-03-11 07:07:09.5240 16650/Ta Ser/Server.h:901 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2021-03-11 07:07:09.5244 16650/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2021-03-11 07:07:09.5240 16650/T8 Ser/Server.h:901 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2021-03-11 07:07:09.5244 16650/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2021-03-11 07:07:09.5239 16650/Tc Ser/Server.h:901 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2021-03-11 07:07:09.5246 16650/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2021-03-11 07:07:09.5245 16650/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2021-03-11 07:07:09.5248 16650/Tg Ser/Server.h:901 ]: [ApiServer] Freed 0 spare client objects
+[ N 2021-03-11 07:07:09.5249 16650/Tg Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2021-03-11 07:07:10.4106 16650/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2021-03-11 07:07:14.1220 16737/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2021-03-11 07:07:14.1690 16739/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2021-03-11 07:07:14.1694 16739/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2021-03-11 07:07:14.1890 16739/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 16739
+[ N 2021-03-11 07:07:16.9703 16739/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 16791 output: D, [2021-03-11T07:08:08.218817 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eopara@gmail.com' LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:08:08.654019 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:08:08.655381 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:08:08.665954 #16791] DEBUG -- :   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:08:16.692006 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:08:51.093264 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eopara@gmail.com' LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:08:51.427348 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:08:51.428279 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:08:51.434099 #16791] DEBUG -- :   [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:09:05.122126 #16791] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:09:05.124553 #16791] DEBUG -- :   [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:09:05.154190 #16791] DEBUG -- :   [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:09:05.158146 #16791] DEBUG -- :   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:08.150590 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:08.153481 #16791] DEBUG -- :   [1m[36mListing Load (1.5ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:08.156122 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:26.593269 #16791] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eopara@gmail.com' LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:26.920079 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:26.921030 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:26.924619 #16791] DEBUG -- :   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:11:39.881887 #16791] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:39.883934 #16791] DEBUG -- :   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:39.886046 #16791] DEBUG -- :   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:39.887593 #16791] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:59.172134 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:59.173200 #16791] DEBUG -- :   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:59.174607 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:11:59.175698 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:12:05.255206 #16791] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:12:05.256260 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:12:06.995867 #16791] DEBUG -- :   [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:12:06.998766 #16791] DEBUG -- :   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+[ N 2021-03-11 07:12:24.1982 16739/T4 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 16798, application /Users/mrsdo/Development/inmotion/sinatra_cms_listings_app (development)
+App 16791 output: D, [2021-03-11T07:14:45.228868 #16791] DEBUG -- :   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:14:45.232098 #16791] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:14:45.236221 #16791] DEBUG -- :   [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:14:48.466511 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:14:48.467547 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:14:48.469970 #16791] DEBUG -- :   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:14:59.673100 #16791] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:14:59.674207 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:14:59.676841 #16791] DEBUG -- :   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:15:02.097543 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:15:02.099603 #16791] DEBUG -- :   [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`id` = 9 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:15:02.103018 #16791] DEBUG -- :   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:15:02.104512 #16791] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:16:43.791237 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:17:00.201533 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eopara@gmail.com' LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:17:00.530377 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:17:00.531321 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:17:00.537487 #16791] DEBUG -- :   [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:27:55.417112 #16791] DEBUG -- :   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:28:03.686584 #16791] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:28:03.688411 #16791] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:28:03.694422 #16791] DEBUG -- :   [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m
+App 16791 output: D, [2021-03-11T07:28:19.732341 #16791] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:28:19.733230 #16791] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+App 16791 output: D, [2021-03-11T07:28:19.736043 #16791] DEBUG -- :   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 4[0m

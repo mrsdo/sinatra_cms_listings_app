@@ -1,0 +1,14 @@
+[
+{"type":"header","version":"4.8.5","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"listings_manager"},
+{"type":"table","name":"users","database":"listings_manager","data":
+[
+{"id":"1","fname":"Neeson","lname":"Grant","email":"new@email.com","username":"ngrant","password_digest":"$2a$12$n\/CEaft4d0qmEUgxnNAPFurBBgw4PI9eVrv\/rUewwlTFPn7NY\/Yuq","created_at":"2018-04-14 02:09:44","updated_at":"2018-04-19 16:22:55"},
+{"id":"2","fname":"Salma","lname":"Tine","email":"salma@hotmail.com","username":"stine","password_digest":"$2a$12$n\/CEaft4d0qmEUgxnNAPFurBBgw4PI9eVrv\/rUewwlTFPn7NY\/Yuq","created_at":"2018-04-14 02:17:30","updated_at":"2018-04-14 02:17:30"},
+{"id":"3","fname":"Rend","lname":"Miller","email":"hend@anything.com","username":"rmiller","password_digest":"$2a$12$n\/CEaft4d0qmEUgxnNAPFurBBgw4PI9eVrv\/rUewwlTFPn7NY\/Yuq","created_at":"2018-04-16 23:44:09","updated_at":"2018-04-16 23:44:09"},
+{"id":"4","fname":"Ed","lname":"Opara","email":"eopara@gmail.com","username":"eopara","password_digest":"$2a$12$n\/CEaft4d0qmEUgxnNAPFurBBgw4PI9eVrv\/rUewwlTFPn7NY\/Yuq","created_at":"2021-02-22 18:42:08","updated_at":"2021-02-24 22:14:58"},
+{"id":"7","fname":"Ima","lname":"User1","email":"imauser1@gmail.com","username":"imauser1","password_digest":"$2a$12$5fvggozJVD6.MHq5sv\/iwOL8\/HRNtQn8TjUYi6X1uFQ5EEXsP7\/CS","created_at":"2021-02-23 00:33:24","updated_at":"2021-02-23 00:33:24"},
+{"id":"35","fname":"Robert","lname":"Dolce","email":"bob@rdolcegroup.com","username":"bob","password_digest":"$2a$12$DDZqsoks10BSJ.uVoTXi\/OXLqefDNSg3galaCMVckk\/X7IssS\/WHK","created_at":"2021-02-23 21:05:47","updated_at":"2021-02-23 21:05:47"}
+]
+}
+]

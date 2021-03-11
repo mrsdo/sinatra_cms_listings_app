@@ -10,7 +10,7 @@ configure :development do
   ActiveRecord::Base.establish_connection(
     :adapter => "mysql2",
     :encoding => "utf8",
-    :database => "dev_sinatralistings_app",
+    :database => "dev_twenty45",
     :username => "root",
     :password => "Palo5non!"
   )
@@ -21,4 +21,3 @@ configure :production do
 end
 
 require_all 'app'
-# this is 

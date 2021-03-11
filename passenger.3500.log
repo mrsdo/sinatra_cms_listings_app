@@ -1,0 +1,38 @@
+[ N 2021-03-11 00:52:56.4608 54015/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2021-03-11 00:52:56.5131 54017/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2021-03-11 00:52:56.5149 54017/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2021-03-11 00:52:56.5495 54017/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 54017
+[ N 2021-03-11 00:52:59.7559 54017/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+App 54034 output: D, [2021-03-11T00:53:06.645488 #54034] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+App 54291 output: D, [2021-03-11T00:53:10.254779 #54291] DEBUG -- :   [1m[36mListing Load (11.7ms)[0m  [1m[34mSELECT `listings`.* FROM `listings`[0m
+App 54291 output: D, [2021-03-11T00:53:38.122403 #54291] DEBUG -- :   [1m[36mUser Load (26.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eopara@gmail.com' LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:53:38.578818 #54291] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:53:38.580510 #54291] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:53:38.693090 #54291] DEBUG -- :   [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 8[0m
+App 54291 output: D, [2021-03-11T00:53:42.658691 #54291] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:53:42.660068 #54291] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:53:42.683358 #54291] DEBUG -- :   [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 8[0m
+App 54291 output: D, [2021-03-11T00:54:44.446955 #54291] DEBUG -- :   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:54:44.449539 #54291] DEBUG -- :   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:54:44.632671 #54291] DEBUG -- :   [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 8[0m
+App 54291 output: D, [2021-03-11T00:54:49.621491 #54291] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:54:49.622888 #54291] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+App 54291 output: D, [2021-03-11T00:54:49.652398 #54291] DEBUG -- :   [1m[36mListing Load (2.1ms)[0m  [1m[34mSELECT `listings`.* FROM `listings` WHERE `listings`.`user_id` = 8[0m
+
+[ N 2021-03-11 00:55:44.5243 54017/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2021-03-11 00:55:44.5244 54017/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2021-03-11 00:55:44.5254 54017/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 54291, application /Volumes/Development/onl01-seng-ft-030121/p2/_phase2_project/sinatra_cms_listings_app (development)
+[ N 2021-03-11 00:55:44.5255 54017/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 54298, application /Volumes/Development/onl01-seng-ft-030121/p2/_phase2_project/sinatra_cms_listings_app (development)
+[ N 2021-03-11 00:55:44.5261 54017/T8 Ser/Server.h:901 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2021-03-11 00:55:44.5261 54017/Ta Ser/Server.h:901 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2021-03-11 00:55:44.5262 54017/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2021-03-11 00:55:44.5263 54017/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2021-03-11 00:55:44.5260 54017/Te Ser/Server.h:901 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2021-03-11 00:55:44.5259 54017/Tc Ser/Server.h:901 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2021-03-11 00:55:44.5261 54017/Tg Ser/Server.h:901 ]: [ApiServer] Freed 0 spare client objects
+[ N 2021-03-11 00:55:44.5263 54017/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2021-03-11 00:55:44.5263 54017/Tg Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2021-03-11 00:55:44.5264 54017/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2021-03-11 00:55:44.5273 54017/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 54291, application /Volumes/Development/onl01-seng-ft-030121/p2/_phase2_project/sinatra_cms_listings_app (development)
+[ N 2021-03-11 00:55:44.5275 54017/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 54298, application /Volumes/Development/onl01-seng-ft-030121/p2/_phase2_project/sinatra_cms_listings_app (development)
+[ N 2021-03-11 00:55:46.0392 54017/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
