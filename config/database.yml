@@ -3,15 +3,15 @@ development:
   encoding: utf8
   database: dev_sinatralistings_app
   username: root
-  password: Palo5non!
+  password: root!
 test:
   adapter: mysql2
   database: test_sinatralistings_app
   username: root
-  password: Palo5non!
+  password: root!
 production:
   adapter: mysql2
   encoding: utf8
   database: sch_sinatralistings_app mydb
   username: root
-  password: Palo5non!
+  password: root!
